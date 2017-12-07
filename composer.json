@@ -9,6 +9,6 @@
   ],
   "require": {
     "valu-digital/ptv-client-for-wordpress": "0.8",
-    "htmlburger/carbon-fields": "2.0.0-beta.11"
+    "htmlburger/carbon-fields": "2.1.1"
   }
 }
