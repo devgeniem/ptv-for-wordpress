@@ -88,9 +88,6 @@ final class PTV_For_WordPress {
 	 */
 	function plugins_loaded() {
 
-		// Load dependencies.
-		require_once( PTV_FOR_WORDPRESS_DIR . '/vendor/autoload.php' );
-
 		// Show admin notice, if dependencies are missing.
 		if ( ! $this->check_dependencies() ) {
 			add_action( 'admin_notices', array( $this, 'show_missing_dependencies_notice' ) );
