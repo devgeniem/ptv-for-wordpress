@@ -115,9 +115,6 @@ final class PTV_For_WordPress {
 		// Add admin menu page.
 		add_action( 'admin_menu', array( $this, 'add_admin_menu' ) );
 
-		// Load custom fields.
-		add_action( 'after_setup_theme', array( $this, 'load_custom_fields' ) );
-
 		// Register post types and taxonomies.
 		add_action( 'init', array( $this, 'register_post_types_and_taxonomies' ), 9 );
 
@@ -139,16 +136,6 @@ final class PTV_For_WordPress {
 	 */
 	function register_post_types_and_taxonomies() {
 		require_once( PTV_FOR_WORDPRESS_DIR . '/core/post-types.php' );
-	}
-
-	/**
-	 * Load custom functions and fields
-	 */
-	function load_custom_fields() {
-
-		Carbon_Fields::boot();
-		require_once( PTV_FOR_WORDPRESS_DIR . '/core/custom-fields.php' );
-
 	}
 
 	/**
